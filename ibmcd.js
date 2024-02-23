@@ -75,7 +75,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/hansika-k/iat@main/touchtrue.js']
 		},
 
 		base_url : {//Where are your images at?
-			image : 'https://github.com/hansika-k/iat/tree/main/images/'
+			image : 'https://github.com/kimaish/IAT-touch/tree/main/images'
 		} 
 	});
 });
