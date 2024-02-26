@@ -75,7 +75,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/kimaish/IAT-touch@main/touchtrue.
 		},
 
 		base_url : {//Where are your images at?
-			image : ''
+			image : 'https://github.com/kimaish/IAT-touch/tree/main/imagesjpg'
 		} 
 	});
 });
