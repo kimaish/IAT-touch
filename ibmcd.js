@@ -12,10 +12,10 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/kimaish/IAT-touch@main/touchtrue.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
             {image: 'IB1.png'},
-				{image: 'IB2.png'},
-				{image: 'IB3.png'},
-				{image: 'IB4.png'},
-				{image: 'IB5.png'}
+				{image: 'IB2.jpg'},
+				{image: 'IB3.jpg'},
+				{image: 'IB4.jpg'},
+				{image: 'IB5.jpg'}
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -32,7 +32,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/kimaish/IAT-touch@main/touchtrue.
 				{image: 'McD2.jpg'},
 				{image: 'McD3.jpg'},
 				{image: 'McD4.jpg'},
-				{image: 'McD5.png'}
+				{image: 'McD5.jpg'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -75,7 +75,7 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/kimaish/IAT-touch@main/touchtrue.
 		},
 
 		base_url : {//Where are your images at?
-			image : 'https://github.com/kimaish/IAT-touch/tree/main/images'
+			image : ''
 		} 
 	});
 });
