@@ -11,7 +11,7 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
         var piCurrent = API.getCurrent();
         //Here we set the settings of our task.
         //Read the comments to learn what each parameters means.
-        //You can also do that from the outside, with a dedicated jsp file.
+        //You can also do that from the outside, with a dedicated jsp file. 
         var iatObj = {
             isTouch: true, //Set whether the task is on a touch device.
             //Set the canvas of the task
