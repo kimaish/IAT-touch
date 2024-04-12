@@ -23,24 +23,18 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 canvasBackground: '#ffffff',
                 borderColor: 'lightblue'
             },
-            //When scoring, we will consider the compatible condition the
-            pairing condition that requires response with one key to[category1, attribute1] and the
-            other key to[category2, attribute2]
+            //When scoring, we will consider the compatible condition the pairing condition that requires response with one key to[category1, attribute1] and the other key to[category2, attribute2]
             category1: {
-                name: 'Black people', //Will appear in the data and in the
-                default feedback message.
+                name: 'Black people', //Will appear in the data and in the default feedback message.
                 title: {
                     media: {
                         word: 'Black people'
-                    }, //Name of the
-                    category presented in the task.
+                    }, //Name of the category presented in the task.
                     css: {
                         color: '#336600',
                         'font-size': '1.8em'
-                    }, //Style of
-                    the category title.
-                    height: 4 //Used to position the "Or" in the
-                    combined block.
+                    }, //Style of the category title.
+                    height: 4 //Used to position the "Or" in the combined block.
                 },
                 stimulusMedia: [ //Stimuli content as PIP's media objects
                     {
@@ -69,20 +63,16 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 }
             },
             category2: {
-                name: 'White people', //Will appear in the data and in the
-                default feedback message.
+                name: 'White people', //Will appear in the data and in the default feedback message.
                 title: {
                     media: {
                         word: 'White people'
-                    }, //Name of the
-                    category presented in the task.
+                    }, //Name of the category presented in the task.
                     css: {
                         color: '#336600',
                         'font-size': '1.8em'
-                    }, //Style of
-                    the category title.
-                    height: 4 //Used to position the "Or" in the
-                    combined block.
+                    }, //Style of the category title.
+                    height: 4 //Used to position the "Or" in the combined block.
                 },
                 stimulusMedia: [ //Stimuli content as PIP's media objects
                     {
@@ -120,8 +110,7 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                         color: '#0000FF',
                         'font-size': '1.8em'
                     },
-                    height: 4 //Used to position the "Or" in the
-                    combined block.
+                    height: 4 //Used to position the "Or" in the combined block.
                 },
                 stimulusMedia: [ //Stimuli content as PIP's media objects
                     {
@@ -165,8 +154,7 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                         color: '#0000FF',
                         'font-size': '1.8em'
                     },
-                    height: 4 //Used to position the "Or" in the
-                    combined block.
+                    height: 4 //Used to position the "Or" in the combined block.
                 },
                 stimulusMedia: [ //Stimuli content as PIP's media objects
                     {
@@ -203,65 +191,46 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
             base_url: { //Where are your images at?
                 image: '/implicit/user/yba/pipexample/biat/images/'
             },
-            //nBlocks : 7, This is not-supported anymore. If you want a 5-block
-            IAT,
-            change blockSecondCombined_nTrials to 0.
-            ////In each block, we can include a number of mini-blocks, to
-            reduce repetition of same group / response.
-            ////If you set the number of trials in any block to 0, that block will
-            be skipped.
+            //nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT,change blockSecondCombined_nTrials to 0.
+            ////In each block, we can include a number of mini-blocks, to reduce repetition of same group / response.
+            ////If you set the number of trials in any block to 0, that block will be skipped.
             blockAttributes_nTrials: 20,
             blockAttributes_nMiniBlocks: 5,
             blockCategories_nTrials: 20,
             blockCategories_nMiniBlocks: 5,
             blockFirstCombined_nTrials: 20,
             blockFirstCombined_nMiniBlocks: 5,
-            blockSecondCombined_nTrials: 40, //Change to 0 if you want 5
-            blocks(you would probably want to increase blockFirstCombined_nTrials).
+            blockSecondCombined_nTrials: 40, //Change to 0 if you want 5 blocks(you would probably want to increase blockFirstCombined_nTrials).
             blockSecondCombined_nMiniBlocks: 10,
             blockSwitch_nTrials: 28,
             blockSwitch_nMiniBlocks: 7,
-            //Should we randomize which attribute is on the right, and which
-            on the left ?
-            randomAttSide : false, // Accepts 'true' and 'false'. If false, then
-            attribute2 on the right.
+            //Should we randomize which attribute is on the right, and which on the left ?
+            randomAttSide : false, // Accepts 'true' and 'false'. If false, then attribute2 on the right.
             //Should we randomize which category is on the right first?
-            randomBlockOrder: true, //Accepts 'true' and 'false'. If false, then
-            category1 on the left first.
-            //Note: the player sends block3Cond at the end of the task (saved
-            in the explicit table) to inform about the categories in that block.
-        //In the block3Cond variable: "att1/cat1,att2/cat2" means att1 and
-        cat1 on the left, att2 and cat2 on the right.
+            randomBlockOrder: true, //Accepts 'true' and 'false'. If false, then category1 on the left first.
+            //Note: the player sends block3Cond at the end of the task (saved in the explicit table) to inform about the categories in that block.
+        //In the block3Cond variable: "att1/cat1,att2/cat2" means att1 and cat1 on the left, att2 and cat2 on the right.
         //Show a reminder what to do on error, throughout the task
         remindError: true,
             remindErrorText: '<p align="center" style="font-size:"0.6em"; fontfamily:arial">' +
-            'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-        color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.
-        ' +
-        'ಮುಂದುವರ ಯುವುದಕ ೆ ಇತರ ಕೀಯನ್ುು ಒತ್ತಿ.<p/>',
+            'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.' +
+            'ಮುಂದುವರ ಯುವುದಕ ೆ ಇತರ ಕೀಯನ್ುು ಒತ್ತಿ.<p/>',
         remindErrorTextTouch: '<p align="center" style="fontsize:"1.4em"; font-family:arial">' +
-            ' ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color="#ff0000"><b>
-        ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.
-        ' +
-        'ಮುಂದುವರ ಯುವುದಕ ೆ ಮತ ೊಿಂದು ಕಡ ಯಲ್ಲಿಮುಟ್ಟಿ.<p/>',
-        errorCorrection: true, //Should participants correct error
-            responses ?
-            errorFBDuration : 500, //Duration of error feedback display
-            (relevant only when errorCorrection is false)
+            ' ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color="#ff0000"><b> ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು. ' +
+            'ಮುಂದುವರ ಯುವುದಕ ೆ ಮತ ೊಿಂದು ಕಡ ಯಲ್ಲಿಮುಟ್ಟಿ.<p/>',
+        errorCorrection: true, //Should participants correct error responses ?
+        errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
         ITIDuration: 250, //Duration between trials.
-            fontColor: '#000000', //The default color used for printed
-            messages.
-        //Text and style for key instructions displayed about the category
-        labels.
+            fontColor: '#000000', //The default color used for printed messages.
+        //Text and style for key instructions displayed about the category labels.
         leftKeyText: 'Press "E" for',
-            rightKeyText: 'Press "I" for',
-            keysCss: {
+        rightKeyText: 'Press "I" for',
+        keysCss: {
                 'font-size': '0.8em',
                 'font-family': 'courier',
                 color: '#000000'
-            },
-            //Text and style for the separator between the top and bottom
-            category labels.
+        },
+            //Text and style for the separator between the top and bottom category labels.
         orText: 'or',
             orCss: {
                 'font-size': '1.8em',
@@ -269,34 +238,26 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
             },
             instWidth: 99, //The width of the instructions stimulus
             finalText: 'ಮುಂದಿನ್ ಟಾಸ್ಕೆ ಗ ಹ ೊೀಗುವುದಕ ೆ ಸ ುೀಸ್ಕಅನ್ುು ಒತ್ತಿ',
-            finalTouchText: 'ಮುಂದಿನ್ ಟಾಸ್ಕೆ ಗ ಮುಂದುವರ ಯುವುದಕ ೆ ತಳ್ಭಾಗದಲ್ಲಿರುವ
-        ಹಸಿರು ಪ್ರದೀ ಶವನ್ುು ಮುಟ್ಟಿ ',
-        touchMaxStimulusWidth: '50%',
+            finalTouchText: 'ಮುಂದಿನ್ ಟಾಸ್ಕೆ ಗ ಮುಂದುವರ ಯುವುದಕ ೆ ತಳ್ಭಾಗದಲ್ಲಿರುವ ಹಸಿರು ಪ್ರದೀ ಶವನ್ುು ಮುಟ್ಟಿ ',
+            
+            touchMaxStimulusWidth: '50%',
             touchMaxStimulusHeight: '50%',
-            bottomTouchCss: {}, //Add any CSS value you want for changing
-            the css of the bottom touch area.
+            bottomTouchCss: {}, //Add any CSS value you want for changing the css of the bottom touch area.
         //Instructions text.
         // You can use the following variables and they will be replaced by
         // the name of the categories and the block's number variables:
-        // leftCategory, rightCategory, leftAttribute and rightAttribute,
-        blockNum, nBlocks.
+        // leftCategory, rightCategory, leftAttribute and rightAttribute, blockNum, nBlocks.
         // Notice that this is HTML text.
         instAttributePractice: '<div><p align="center" style="fontsize:20px; font-family:arial">' +
-            '<font color="#000000"><u>Part blockNum of nBlocks <
-            /u><br/ > < br / > < /p>' +
-        '<p style="font-size:20px; text-align:left; verticalalign:bottom; margin-left:10px; font-family:arial">' +
-        '<font color="#0000ff">leftAttribute.</font> ಕ್ಯಾಟಗರಿಗೆ
-        ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಎಡ ಕ್ೆೈನ ಬೆರಳನುು < b > ಇ < /b> ಕೇ ಮೇಲೆ ಇಡಿ' +
-        '<br/> <font color="#0000ff">rightAttribute</font> ಕ್ಯಾಟಗರಿಗೆ
-        ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಬಲ ಕ್ೆೈನ ಬೆರಳನುು < b > ಐ < /b> ಕೇ ಮೇಲೆ ಇಡಿ.<br/ > < br / > ' +
-        'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-        color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.
-        ' +
-        'ಮುಂದುವರ ಯುವುದಕ ೆ ಇತರ ಕೀಯನ್ುು ಒತ್ತಿ.<br/>' +
-        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ
-        ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>'+
-        '<p align="center">ನೇವು ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ ಸಿದದವಿದಯದಗ <b>ಸ ುೀಸ್ಕ
-        ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
+            
+        '<font color="#000000"><u>Part blockNum of nBlocks </u><br/ > < br / > < /p>' +
+        '<p style="font-size:20px; text-align:left; verticalalign:bottom; margin-left:10px; font-family:arial">' + 
+        '<font color="#0000ff">leftAttribute.</font> ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಎಡ ಕ್ೆೈನ ಬೆರಳನುು < b > ಇ < /b> ಕೇ ಮೇಲೆ ಇಡಿ' +
+        '<br/> <font color="#0000ff">rightAttribute</font> ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಬಲ ಕ್ೆೈನ ಬೆರಳನುು < b > ಐ < /b> ಕೇ ಮೇಲೆ ಇಡಿ.<br/ > < br / > ' +
+        'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು. ' +
+        'ಮುಂದುವರ ಯುವುದಕ ೆ ಇತರ ಕೀಯನ್ುು ಒತ್ತಿ.<br/>' +'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>'+
+        '<p align="center">ನೇವು ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ ಸಿದದವಿದಯದಗ <b>ಸ ುೀಸ್ಕ ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
+
         instAttributePracticeTouch: [
                 '<div>',
                 '<p align="center">',
@@ -304,40 +265,25 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 '</p>',
                 '<p align="left" style="margin-left:5px">',
                 '<br/>',
-                '<font color="#0000ff">leftAttribute</font>
-                ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಳಿಗಯಗಿ < b > ಎಡಭಾಗದ < /b> ಹಸಿರು ಪ್ಾದೆೇಶದ ಮೇಲೆ ಎಡಗೆೈ ಬೆರಳನುು
-                ಇಡಿ. < br / > ',
-                '<font color="#0000ff">rightAttribute</font>
-                ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಳಿಗಯಗಿ < b > ಬಲಭಾಗದ < /b> ಹಸಿರು ಪ್ಾದೆೇಶದ ಮೇಲೆ ಬಲಗೆೈ ಬೆರಳನುು
-                ಇಡಿ. < br / > ',
-                'ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ
-                ಕಾಣಿಸುವವು. < br / > ',
+                '<font color="#0000ff">leftAttribute</font> ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಳಿಗಯಗಿ < b > ಎಡಭಾಗದ < /b> ಹಸಿರು ಪ್ಾದೆೇಶದ ಮೇಲೆ ಎಡಗೆೈ ಬೆರಳನುು ಇಡಿ. < br / > ',
+                '<font color="#0000ff">rightAttribute</font> ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಳಿಗಯಗಿ < b > ಬಲಭಾಗದ < /b> ಹಸಿರು ಪ್ಾದೆೇಶದ ಮೇಲೆ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ. < br / > ',
+                'ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ ಕಾಣಿಸುವವು. < br / > ',
                 '<br/>',
-                'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-                color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಮತೊಿಂ ದು ಕಡ ಯಲ್ಲಿ
-                ಮುಟ್ಟಿ.ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.',
+                'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಮತೊಿಂ ದು ಕಡ ಯಲ್ಲಿ ಮುಟ್ಟಿ.ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.',
                 '</p>',
-                '<p align="center">ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ <b>ತಳ್ಭಾಗದಲ್ಲಿ <
-                /b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
+                '<p align="center">ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ <b>ತಳ್ಭಾಗದಲ್ಲಿ </b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
                 '</div>'
             ].join('\n'),
             instCategoriesPractice: '<div><p align="center" style="fontsize:20px; font-family:arial">' +
-            '<font color="#000000"><u>Part blockNum of nBlocks <
-            /u><br/ > < br / > < /p>' +
+            '<font color="#000000"><u>Part blockNum of nBlocks </u><br/ > < br / > < /p>' +
         '<p style="font-size:20px; text-align:left; verticalalign:bottom; margin-left:10px; font-family:arial">' +
-        '<font color="#336600">leftCategory</font> ಕ್ಯಾಟಗರಿಗೆ
-        ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಎಡ ಕ್ೆೈನ ಬೆರಳನುು < b > ಇ < /b> ಕೇ ಮೇಲೆ ಇಡಿ. ' +
-        '<br/><font color="#336600">rightCategory</font>
-        ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಬಲ ಕ್ೆೈನ ಬೆರಳನುು < b > ಐ < /b> ಕೇ ಮೇಲೆ ಇಡಿ.<br/ > ' +
+        '<font color="#336600">leftCategory</font> ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಎಡ ಕ್ೆೈನ ಬೆರಳನುು < b > ಇ < /b> ಕೇ ಮೇಲೆ ಇಡಿ. ' +
+        '<br/><font color="#336600">rightCategory</font> ಕ್ಯಾಟಗರಿಗೆ ಸೆೇರಿರುವಂತಹ ಐಟಂಗಯಗಿ ಬಲ ಕ್ೆೈನ ಬೆರಳನುು < b > ಐ < /b> ಕೇ ಮೇಲೆ ಇಡಿ.<br/ > ' +
         'ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ ಕಾಣಿಸುವವು.<br/><br/>' +
-        'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-        color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.
-        ' +
+        'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.' +
         'ಮುಂದುವರ ಯುವುದಕ ೆ ಇತರ ಕೀಯನ್ುು ಒತ್ತಿ.<br/>' +
-        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ
-        ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>'+
-        '<p align="center">ನೇವು ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ ಸಿದದವಿದಯದಗ <b>ಸ ುೀಸ್ಕ
-        ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
+        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>'+
+        '<p align="center">ನೇವು ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ ಸಿದದವಿದಯದಗ <b>ಸ ುೀಸ್ಕ ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
         instCategoriesPracticeTouch: [
                 '<div>',
                 '<p align="center">',
@@ -345,43 +291,25 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 '</p>',
                 '<p align="left" style="margin-left:5px">',
                 '<br/>',
-                'Put a left finger over the <b>left</b> green
-                area
-                for items that belong to the category < font
-                color = "#336600" > leftCategory < /font>.<br/ > ',
-                'Put a right finger over the <b>right</b>
-                green area
-                for items that belong to the category < font
-                color = "#336600" > rightCategory < /font>.<br/ > ',
-                ' ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ
-                ಕಾಣಿಸುವವು. < br / > ',
+                'Put a left finger over the <b>left</b> green area for items that belong to the category < font color = "#336600" > leftCategory < /font>.<br/ > ',
+                'Put a right finger over the <b>right</b> green area for items that belong to the category < font color = "#336600" > rightCategory < /font>.<br/ > ',
+                ' ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ ಕಾಣಿಸುವವು. < br / > ',
                 '<br/>',
-                'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-                color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಮತೊಿಂ ದು ಕಡ ಯಲ್ಲಿ
-                ಮುಟ್ಟಿ.ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.',
+                'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಮತೊಿಂ ದು ಕಡ ಯಲ್ಲಿ ಮುಟ್ಟಿ.ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.',
                 '</p>',
-                '<p align="center">Touch the <b>lower </b> green
-                area to start. < /p>',
+                '<p align="center">Touch the <b>lower </b> green area to start. < /p>',
                 '</div>'
             ].join('\n'),
-            instFirstCombined: '<div><p align="center" style="font-size:20px;
-        font - family: arial ">' +
-        '<font color="#000000"><u>Part blockNum of nBlocks <
-        /u><br/ > < br / > < /p>' +
+            instFirstCombined: '<div><p align="center" style="font-size:20px; font - family: arial ">' +
+        '<font color="#000000"><u>Part blockNum of nBlocks </u><br/ > < br / > < /p>' +
         '<p style="font-size:20px; text-align:left; verticalalign:bottom; margin-left:10px; font-family:arial">' +
-        '<font color="#336600">leftCategory</font> ಮತುಿ<font
-        color = "#0000ff" > leftAttribute < /font>ಗಯಗಿ <b>ಇ</b > ಕೇ ಬಳಸಿ. < br / > ' +
-        '<font color="#336600">rightCategory</font> ಮತುಿ<font
-        color = "#0000ff" > rightAttribute < /font>ಗಯಗಿ <b>ಐ</b > ಕೇ ಬಳಸಿ. < br / > ' +
+        '<font color="#336600">leftCategory</font> ಮತುಿ<font color = "#0000ff" > leftAttribute < /font>ಗಯಗಿ <b>ಇ</b > ಕೇ ಬಳಸಿ. < br / > ' +
+        '<font color="#336600">rightCategory</font> ಮತುಿ<font color = "#0000ff" > rightAttribute < /font>ಗಯಗಿ <b>ಐ</b > ಕೇ ಬಳಸಿ. < br / > ' +
         'ಪ್ರತ್ತಯಂದು ಐಟಂ ಒಂದು ಕಾಯಟಗರಿಗ ಮಾತರ ಸ ೀರಿದುು.<br/><br/>' +
-        ' ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-        color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.
-        ' +
+        ' ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.' +
         'ಮುಂದುವರ ಯುವುದಕ ೆ ಇತರ ಕೀಯನ್ುು ಒತ್ತಿ.<br/>' +
-        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ
-        ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>' +
-        '<p align="center">ನೇವು ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ ಸಿದದವಿದಯದಗ <b>ಸ ುೀಸ್ಕ
-        ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
+        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>' +
+        '<p align="center">ನೇವು ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ ಸಿದದವಿದಯದಗ <b>ಸ ುೀಸ್ಕ ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
         instFirstCombinedTouch: [
                 '<div>',
                 '<p align="center">',
@@ -390,69 +318,44 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 '<br/>',
                 '<br/>',
                 '<p align="left" style="margin-left:5px">',
-                '<b>ಎಡಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font
-                color = "#336600" > leftCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font
-                color = "#0000ff" > leftAttribute < /font> ಗಯಗಿ ಎಡಗೆೈ ಬೆರಳನುು ಇಡಿ.</br > ',
-                '<b>ಬಲಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font
-                color = "#336600" > rightCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font
-                color = "#0000ff" > rightAttribute < /font>ಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.</br > ',
-                ' ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-                color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಮತೊಿಂ ದು ಕಡ ಯಲ್ಲಿ
-                ಮುಟ್ಟಿ.ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.</br > ',
+                '<b>ಎಡಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font color = "#336600" > leftCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font color = "#0000ff" > leftAttribute < /font> ಗಯಗಿ ಎಡಗೆೈ ಬೆರಳನುು ಇಡಿ.</br > ',
+                '<b>ಬಲಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font color = "#336600" > rightCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font color = "#0000ff" > rightAttribute < /font>ಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.</br > ',
+                ' ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಮತೊಿಂ ದು ಕಡ ಯಲ್ಲಿ ಮುಟ್ಟಿ.ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.</br > ',
                 '</p>',
-                '<p align="center">ಪ್ಾರರಂಭಿಸುವುದಕ ೆ <
-                b > ತಳ್ಭಾಗದಲ್ಲಿ < /b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
+                '<p align="center">ಪ್ಾರರಂಭಿಸುವುದಕ ೆ <b > ತಳ್ಭಾಗದಲ್ಲಿ < /b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
                 '</div>'
             ].join('\n'),
             instSecondCombined: '<div><p align="center" style="fontsize:20px; font-family:arial">' +
-            '<font color="#000000"><u>Part blockNum of nBlocks <
-            /u><br/ > < br / > < /p>' +
+            '<font color="#000000"><u>Part blockNum of nBlocks </u><br/ > < br / > < /p>' +
         '<p style="font-size:20px; text-align:left; verticalalign:bottom; margin-left:10px; font-family:arial">' +
         'ಇದು ಈ ಹಂದಿನ್ ಭಾಗದ ರಿೀತ್ತಯಲ್ಲಿಯೀ ಇರುವುದು.<br/>' +
-        '<font color="#336600">leftCategory</font> ಮತುಿ<font
-        color = "#0000ff" > leftAttribute < /font>ಗಯಗಿ <b>ಇ</b > ಕೇ ಬಳಸಿ. < br / > ' +
-        '<font color="#336600">rightCategory</font> ಮತುಿ<font
-        color = "#0000ff" > rightAttribute < /font> ಗಯಗಿ <b>ಐ</b > ಕೇ ಬಳಸಿ. < br / > ' +
+        '<font color="#336600">leftCategory</font> ಮತುಿ<font color = "#0000ff" > leftAttribute < /font>ಗಯಗಿ <b>ಇ</b > ಕೇ ಬಳಸಿ. < br / > ' +
+        '<font color="#336600">rightCategory</font> ಮತುಿ<font color = "#0000ff" > rightAttribute < /font> ಗಯಗಿ <b>ಐ</b > ಕೇ ಬಳಸಿ. < br / > ' +
         'ಪ್ರತ್ತಯಂದು ಐಟಂ ಒಂದು ಕಾಯಟಗರಿಗ ಮಾತರ ಸ ೀರಿದುು.<br/><br/>' +
-        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ
-        ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>' +
-        '<p align="center">ನೀವು ಪ್ಾರರಂಭಿಸುವುದಕ ೆ ಸಿದುವಿದಾುಗ <b>ಸ ುೀಸ್ಕ
-        ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
+        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>' +
+        '<p align="center">ನೀವು ಪ್ಾರರಂಭಿಸುವುದಕ ೆ ಸಿದುವಿದಾುಗ <b>ಸ ುೀಸ್ಕ ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
         instSecondCombinedTouch: [
                 '<div>',
-                '<p align="center"><u>Part blockNum of
-                nBlocks < /u></p > ',
+                '<p align="center"><u>Part blockNum of nBlocks < /u></p > ',
                 '<br/>',
                 '<br/>',
                 '<p align="left" style="margin-left:5px">',
-                '<b>ಎಡಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font
-                color = "#336600" > leftCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font
-                color = "#0000ff" > leftAttribute < /font> ಗಯಗಿ ಎಡಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
-                '<b>ಬಲಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font
-                color = "#336600" > rightCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font
-                color = "#0000ff" > rightAttribute < /font>ಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
+                '<b>ಎಡಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font color = "#336600" > leftCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font color = "#0000ff" > leftAttribute < /font> ಗಯಗಿ ಎಡಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
+                '<b>ಬಲಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font color = "#336600" > rightCategory < /font> ಐಟಂಗಳ್ಳ ಮತುಿ<font color = "#0000ff" > rightAttribute < /font>ಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
                 '<br/>',
-                'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ
-                ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > ',
+                'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > ',
                 '</p>',
-                '<p align="center">ಪ್ಾರರಂಭಿಸುವುದಕ ೆ <b>ತಳ್ಭಾಗದಲ್ಲಿ <
-                /b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
+                '<p align="center">ಪ್ಾರರಂಭಿಸುವುದಕ ೆ <b>ತಳ್ಭಾಗದಲ್ಲಿ </b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
                 '</div>'
             ].join('\n'),
             instSwitchCategories: '<div><p align="center" style="fontsize:20px; font-family:arial">' +
-            '<font color="#000000"><u>Part blockNum of nBlocks <
-            /u><br/ > < br / > < /p>' +
+            '<font color="#000000"><u>Part blockNum of nBlocks </u><br/ > < br / > < /p>' +
         '<p style="font-size:20px; text-align:left; verticalalign:bottom; margin-left:10px; font-family:arial">' +
-        '<b>ಗಮನಸಿ, ಲ ೀಬಲ್ ಗಳ್ಳ ಸಾಾನ್ವನ್ುು ಬದಲಾವಣ
-        ಮಾಡಿವ! < /b><br/ > ' +
-        '<font color="#336600">leftCategory</font>ಗಯಗಿ <b>ಇ</b>
-        ಕೇನ ಮೇಲೆ ಎಡಗೆೈ ಬೆರಳನುು ಬಳಸಿ. < br / > ' +
-        'font color="#336600">rightCategory</font> ಗಯಗಿ <b>ಐ</b>
-        ಕೇನ ಮೇಲೆ ಎಡಗೆೈ ಬೆರಳನುು ಬಳಸಿ. < br / > < br / > ' +
-        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ
-        ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>' +
-        '<p align="center">ನೀವು ಪ್ಾರರಂಭಿಸುವುದಕ ೆ ಸಿದುವಿದಾುಗ <b>ಸ ುೀಸ್ಕ
-        ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
+        '<b>ಗಮನಸಿ, ಲ ೀಬಲ್ ಗಳ್ಳ ಸಾಾನ್ವನ್ುು ಬದಲಾವಣ ಮಾಡಿವ! < /b><br/ > ' +
+        '<font color="#336600">leftCategory</font>ಗಯಗಿ <b>ಇ</b> ಕೇನ ಮೇಲೆ ಎಡಗೆೈ ಬೆರಳನುು ಬಳಸಿ. < br / > ' +
+        'font color="#336600">rightCategory</font> ಗಯಗಿ <b>ಐ</b> ಕೇನ ಮೇಲೆ ಎಡಗೆೈ ಬೆರಳನುು ಬಳಸಿ. < br / > < br / > ' +
+        'ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ <u>ಸಾಧ್ಯವಾದಷ್ೊಿ ವ ೀಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > < br / > < /p>' +
+        '<p align="center">ನೀವು ಪ್ಾರರಂಭಿಸುವುದಕ ೆ ಸಿದುವಿದಾುಗ <b>ಸ ುೀಸ್ಕ ಬಾರ್ < /b> ಅನ್ುು ಒತ್ತಿ.</font > < /p></div > ',
         instSwitchCategoriesTouch: [
                 '<div>',
                 '<p align="center">',
@@ -460,63 +363,30 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 '</p>',
                 '<p align="left" style="margin-left:5px">',
                 '<br/>',
-                'ಗಮನಸಿ, ಲ ೀಬಲ್ ಗಳ್ಳ ಸಾಾನ್ವನ್ುು ಬದಲಾವಣ
-                ಮಾಡಿವ! < br / > ',
-                '<b>ಎಡಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <
-                font color = "#336600" > leftCategory < /font> ಐಟಂಗಳಿಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
-                '<b>ಬಲಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <
-                font color = "#336600" > rightCategory < /font> ಐಟಂಗಳಿಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
-                ' ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ
-                ಕಾಣಿಸುವವು.
-                ',
+                'ಗಮನಸಿ, ಲ ೀಬಲ್ ಗಳ್ಳ ಸಾಾನ್ವನ್ುು ಬದಲಾವಣ ಮಾಡಿವ! < br / > ',
+                '<b>ಎಡಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ <font color = "#336600" > leftCategory < /font> ಐಟಂಗಳಿಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
+                '<b>ಬಲಭಾಗದ</b> ಹಸಿರು ಪ್ರದ ೀಶದ ಮ್ಮೀಲ < font color = "#336600" > rightCategory < /font> ಐಟಂಗಳಿಗಯಗಿ ಬಲಗೆೈ ಬೆರಳನುು ಇಡಿ.<br/ > ',
+                ' ಐಟಂಗಳ್ಳ ಒಂದು ಬಾರಿಗ ಒಂದರಂತ ಕಾಣಿಸುವವು.',
                 '<br/>',
-                'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font
-                color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಇತರ ಕಡ ಯಲ್ಲಿಮುಟ್ಟಿ.
-                ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > ',
+                'ಒಂದ ೊಮ್ಮೆ ನೀವು ತಪ್ುು ಮಾಡಿದಲ್ಲಿ, <font color = "#ff0000" > < b > ಎಕ್ಸ್ < /b></font > ವು ಕಂ ಪ್ು ಬಣ್ಣದಲ್ಲಿಕಾಣಿಸಿಕೊ ಳ್ಳುವುದು.ಇತರ ಕಡ ಯಲ್ಲಿಮುಟ್ಟಿ. ಯಯವುದೆೇ ತಪ್ಪನುು ಮಯಡದೆಯೇ < u > ಸಾಧ್ಯವಾದಷ್ೊಿ ವೀ ಗವಾಗಿ ಮುಂದಕೆ ಹೊೀ ಗಿ < /u>.<br/ > ',
                 '</p>',
-                '<p align="center">ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ <
-                b > ತಳ್ಭಾಗದಲ್ಲಿ < /b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
+                '<p align="center">ಪ್ಯಾರಂಭಿಸುವುದಕ್ೆೆ <b > ತಳ್ಭಾಗದಲ್ಲಿ < /b> ಹಸಿರು ಪ್ರದ ೀಶವನ್ುು ಮುಟ್ಟಿ.</p > ',
                 '</div>'
             ].join('\n'),
-            instThirdCombined: 'instFirstCombined', //this means that we're
-            going to use the instFirstCombined property
-        for the third combined block as well.You
-        can change that.
-        instFourthCombined: 'instSecondCombined', //this means that
-            we 're going to use the instSecondCombined property for the fourth combined block as
-        well.You can change that.
-        instThirdCombinedTouch: 'instFirstCombined', //this means that
-            we 're going to use the instFirstCombined property for the third combined block as well.
-        You can change that.
-        instFourthCombinedTouch: 'instSecondCombined', //this means
-            that we 're going to use the instSecondCombined property for the fourth combined block
-        as well.You can change that.
+            instThirdCombined: 'instFirstCombined', //this means that we're going to use the instFirstCombined property for the third combined block as well.You can change that.
+        instFourthCombined: 'instSecondCombined', //this means that we 're going to use the instSecondCombined property for the fourth combined block as well.You can change that.
+        instThirdCombinedTouch: 'instFirstCombined', //this means that we 're going to use the instFirstCombined property for the third combined block as well. You can change that.
+        instFourthCombinedTouch: 'instSecondCombined', //this means that we 're going to use the instSecondCombined property for the fourth combined block as well.You can change that.
         //The default feedback messages for each cutoff -
-        //attribute1, and attribute2 will be replaced with the name of
-        attribute1 and attribute2.
-        //categoryA is the name of the category that is found to be
-        associated with attribute1,
-        //and categoryB is the name of the category that is found to be
-        associated with attribute2.
-        fb_strong_Att1WithCatA_Att2WithCatB: 'Your responses
-        suggested a strong automatic preference
-        for categoryB over categoryA.
-        ',
-        fb_moderate_Att1WithCatA_Att2WithCatB: 'Your responses
-        suggested a moderate automatic preference
-        for categoryB over categoryA.
-        ',
-        fb_slight_Att1WithCatA_Att2WithCatB: 'Your responses suggested
-        a slight automatic preference
-        for categoryB over categoryA.
-        ',
-        fb_equal_CatAvsCatB: 'Your responses suggested no automatic
-        preference between categoryA and categoryB.
-        ',
+        //attribute1, and attribute2 will be replaced with the name of attribute1 and attribute2.
+        //categoryA is the name of the category that is found to be associated with attribute1,
+        //and categoryB is the name of the category that is found to be associated with attribute2.
+        fb_strong_Att1WithCatA_Att2WithCatB: 'Your responses suggested a strong automatic preference for categoryB over categoryA.',
+        fb_moderate_Att1WithCatA_Att2WithCatB: 'Your responses suggested a moderate automatic preference for categoryB over categoryA.',
+        fb_slight_Att1WithCatA_Att2WithCatB: 'Your responses suggested a slight automatic preference for categoryB over categoryA.',
+        fb_equal_CatAvsCatB: 'Your responses suggested no automatic preference between categoryA and categoryB.',
         //Error messages in the feedback
-        manyErrors: 'There were too many errors made to determine a
-        result.
-        ',
+        manyErrors: 'There were too many errors made to determine a result. ',
         tooFast: 'There were too many fast trials to determine a result.',
             notEnough: 'There were not enough trials to determine a result.'
     };
@@ -541,8 +411,7 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
             return ctx.logs;
         },
         // Transform logs into a string
-        // we save as CSV because qualtrics limits to 20K characters and this is more
-        efficient.
+        // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
         serialize: function(name, logs) {
             var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat', 'stim', 'resp', 'err', 'rt', 'd',
                 'fb', 'bOrd'
@@ -695,14 +564,10 @@ define(['pipAPI', 'pipScorer', 'underscore'], function(APIConstructor, Scorer, _
                 //console.log('compute score');
                 var DScoreObj = scorer.computeD();
                 piCurrent.feedback = DScoreObj.FBMsg;
-                piCurrent.d = DScoreObj.DScore; //YBYB: Added on
-                28 March2017
-                //console.log('score computed, d='+piCurrent.d + "
-                fb = " + piCurrent.feedback);
+                piCurrent.d = DScoreObj.DScore; //YBYB: Added on 28 March2017
+                //console.log('score computed, d='+piCurrent.d + "fb = " + piCurrent.feedback);
                 //YBYB: API.save will not work in qualtrics
-                //API.save({block3Cond:block3Cond,
-                feedback: DScoreObj.FBMsg, d: DScoreObj.DScore
-            });
+                //API.save({block3Cond:block3Cond, feedback: DScoreObj.FBMsg, d: DScoreObj.DScore});
         //Perhaps we need to add this to support Qualtrics
         window.minnoJS.onEnd();
     }
@@ -715,17 +580,13 @@ API.addTrialSets('sort', {
     data: {
         score: 0,
         parcel: 'none'
-    }, //We're using only one parcel for
-    computing the score,
-    so we 're always going to call it '
-    first '.
+    }, //We're using only one parcel for computing the score, so we 're always going to call it 'first '.
     // set the interface for trials
     input: [{
             handle: 'skip1',
             on: 'keypressed',
             key: 27
-        }, //Esc + Enter will
-        skip blocks
+        }, //Esc + Enter will skip blocks
         leftInput,
         rightInput
     ],
@@ -751,25 +612,22 @@ API.addTrialSets('sort', {
                 {
                     type: 'inputEquals',
                     value: ['right', 'left']
-                } //
-                responded with one of the two responses
+                } // responded with one of the two responses
             ],
             actions: [{
                     type: 'setTrialAttr',
                     setter: {
                         score: 1
                     }
-                }, //
-                set the score to 1 {
+                }, // set the score to 1 
+                {
                     type: 'showStim',
                     handle: 'error'
-                }, // show error
-                stimulus {
+                }, // show error stimulus 
+                {
                     type: 'trigger',
                     handle: 'onError'
-                } // perhaps
-                we need to end the trial(
-                    if no errorCorrection)
+                } // perhaps we need to end the trial(if no errorCorrection)
             ]
         },
         // error when there is no correction
@@ -782,22 +640,20 @@ API.addTrialSets('sort', {
                 {
                     type: 'inputEquals',
                     value: 'onError'
-                } //Was
-                error
+                } //Was error
             ],
             actions: [{
                     type: 'removeInput',
                     handle: 'All'
-                }, //Cannot
-                respond anymore {
+                }, //Cannot respond anymore 
+                {
                     type: 'log'
                 }, // log this trial
                 {
                     type: 'trigger',
                     handle: 'ITI',
                     duration: piCurrent.errorFBDuration
-                } // Continue to the ITI, after that error fb has been
-                displayed
+                } // Continue to the ITI, after that error fb has been displayed
             ]
         },
         // correct
@@ -805,24 +661,22 @@ API.addTrialSets('sort', {
             conditions: [{
                 type: 'inputEqualsTrial',
                 property: 'corResp'
-            }], // check if the input handle is equal to correct response (in the
-            trial 's data object)
+            }], // check if the input handle is equal to correct response (in the trial 's data object)
             actions: [{
                     type: 'removeInput',
                     handle: 'All'
-                }, //Cannot
-                respond anymore {
+                }, //Cannot respond anymore 
+                {
                     type: 'hideStim',
                     handle: 'All'
-                }, // hide
-                everything {
+                }, // hide everything 
+                {
                     type: 'log'
                 }, // log this trial
                 {
                     type: 'trigger',
                     handle: 'ITI'
-                } // End the trial after
-                ITI
+                } // End the trial after ITI
             ]
         },
         // Display nothing for ITI until the next trial
@@ -834,17 +688,16 @@ API.addTrialSets('sort', {
             actions: [{
                     type: 'removeInput',
                     handle: 'All'
-                }, //Cannot
-                respond anymore {
+                }, //Cannot respond anymore 
+                {
                     type: 'hideStim',
                     handle: 'All'
-                }, // hide
-                everything {
+                }, // hide everything 
+                {
                     type: 'trigger',
                     handle: 'end',
                     duration: piCurrent.ITIDuration
-                } // Continue to the ITI, after that error fb has been
-                displayed
+                } // Continue to the ITI, after that error fb has been displayed
             ]
         },
         // end after ITI
@@ -896,8 +749,8 @@ API.addTrialSets('sort', {
  * Create default instructions trials
  */
 API.addTrialSets('instructions', [
-    // generic instructions trial, to be inherited by all other inroduction
-    trials {
+    // generic instructions trial, to be inherited by all other inroduction trials 
+    {
         // set block as generic so we can inherit it later
         data: {
             blockStart: true,
@@ -1031,8 +884,7 @@ API.addTrialSets(basicTrialSets);
  */
 //Basic stimuli
 API.addStimulusSets({
-    // This Default stimulus is inherited by the other stimuli so that we
-    can have a consistent look and change it from one place
+    // This Default stimulus is inherited by the other stimuli so that we can have a consistent look and change it from one place
     Default: [{
         css: {
             color: piCurrent.fontColor,
@@ -1111,8 +963,7 @@ API.addStimulusSets({
             }
         }
     }],
-    // this stimulus used for giving feedback, in this case only the error
-    notification
+    // this stimulus used for giving feedback, in this case only the error notification
     error: [{
         handle: 'error',
         location: {
@@ -1182,8 +1033,7 @@ API.addMediaSets({
  * Create the Task sequence
  */
 //helper Function for getting the instructions HTML.
-function getInstFromTemplate(params) { //params: instTemplate, blockNum, nBlocks, leftCat, rightCat, leftAtt,
-    rightAtt.
+function getInstFromTemplate(params) { //params: instTemplate, blockNum, nBlocks, leftCat, rightCat, leftAtt, rightAtt.
     var retText = params.instTemplate
         .replace(/leftCategory/g, params.leftCategory)
         .replace(/rightCategory/g, params.rightCategory)
@@ -1220,23 +1070,17 @@ function getLayout(params) {
     }
     var template = '' +
         ' <div style="margin:0 1em; text-align:center"> ' +
-        ' <div style="font-size:0.8em; <%= stimulusData.keysCss %
-        > ;
-    visibility: < %= stimulusData.isTouch ? \'hidden\' : \'visible\' %>"> ' +
-        ' <%= stimulusData.isLeft ? stimulusData.leftKeyText :
-        stimulusData.rightKeyText % > ' +
+        ' <div style="font-size:0.8em; <%= stimulusData.keysCss %> ;visibility: < %= stimulusData.isTouch ? \'hidden\' : \'visible\' %>"> ' +
+        ' <%= stimulusData.isLeft ? stimulusData.leftKeyText :stimulusData.rightKeyText % > ' +
     ' </div> ' +
     ' ' +
-    ' <div style="font-size:1.3em;<%= stimulusData.firstCss %
-    > "> ' +
+    ' <div style="font-size:1.3em;<%= stimulusData.firstCss %> "> ' +
     ' <%= stimulusData.first %> ' +
     ' </div> ' +
     ' ' +
     ' <% if (stimulusData.second) { %> ' +
-    ' <div style="font-size:2.3em; <%=
-    stimulusData.orCss % > "><%= stimulusData.orText %> </div> ' +
-    ' <div style="font-size:1.3em; max-width:100%; <%=
-    stimulusData.secondCss % > "> ' +
+    ' <div style="font-size:2.3em; <%= stimulusData.orCss % > "><%= stimulusData.orText %> </div> ' +
+    ' <div style="font-size:1.3em; max-width:100%; <%=stimulusData.secondCss % > "> ' +
     ' <%= stimulusData.second %> ' +
     ' </div> ' +
     ' <% } %> ' +
@@ -1346,8 +1190,7 @@ function getInstTrial(params) {
         isInst: true
     };
     //The names of the category and attribute labels.
-    if (params.nCats == 2) { //When there are only two categories in the block, one two of
-        these will appear in the instructions.
+    if (params.nCats == 2) { //When there are only two categories in the block, one two of these will appear in the instructions.
         instParams.leftAttribute = params.left1.name;
         instParams.rightAttribute = params.right1.name;
         instParams.leftCategory = params.left1.name;
@@ -1399,8 +1242,7 @@ function getInstTrial(params) {
     return instTrial;
 }
 //Get a mixer for a mini-block in a 2-categories block.
-function getMiniMixer2(params) { //{nTrialsInMini : , currentCond : , rightTrial : , leftTrial : , blockNum : ,
-    blockLayout: )
+function getMiniMixer2(params) { //{nTrialsInMini : , currentCond : , rightTrial : , leftTrial : , blockNum : ,blockLayout: )
 var mixer = {
     mixer: 'repeat',
     times: params.nTrialsInMini / 2,
@@ -1428,14 +1270,8 @@ return ({
 });
 }
 //Get a mixer for a mini-block in a 4-categories block.
-function getMiniMixer4(params) { //{nTrialsInMini : , currentCond : , cong: , rightTrial1 : , leftTrial1 : ,
-    rightTrial2: ,
-    leftTrial2: ,
-    blockNum: ,
-    blockLayout: ,
-    parcel: )
-////Because of the alternation, we randomize the trial order
-ourselves.
+function getMiniMixer4(params) { //{nTrialsInMini : , currentCond : , cong: , rightTrial1 : , leftTrial1 : ,rightTrial2: ,leftTrial2: ,blockNum: ,blockLayout: ,parcel: )
+////Because of the alternation, we randomize the trial order ourselves.
 var atts = [];
 var cats = [];
 var iTrial;
@@ -1572,11 +1408,7 @@ if ((rightAttName == att1.name && rightCatName == cat1.name) ||
     (rightAttName == att2.name && rightCatName == cat2.name)) {
     isCompatible = COMPATIBLE;
 }
-//console.log('rightAttName='+rightAttName+'
-rightCatName = '+rightCatName+'
-att1.name = '+att1.name+'
-cat1.name = '+cat1.name +
-'isCompatible=' + isCompatible);
+//console.log('rightAttName='+rightAttName+'rightCatName = '+rightCatName+'att1.name = '+att1.name+'cat1.name = '+cat1.name +'isCompatible=' + isCompatible);
 //Number variables
 blockParamsAtts.nMiniBlocks = globalObj.blockAttributes_nMiniBlocks;
 blockParamsAtts.nTrials = globalObj.blockAttributes_nTrials;
@@ -1849,11 +1681,8 @@ scorer.addSettings('compute', {
     cond2VarValues: [INCOMPATIBLE],
     parcelVar: "parcel",
     parcelValue: ['first', 'second'],
-    fastRT: 150, //Below this reaction time, the latency is considered
-    extremely fast.
-    maxFastTrialsRate: 0.1, //Above this % of extremely fast responses
-    within a condition,
-    the participant is considered too fast.
+    fastRT: 150, //Below this reaction time, the latency is considered extremely fast.
+    maxFastTrialsRate: 0.1, //Above this % of extremely fast responses within a condition, the participant is considered too fast.
     minRT: 400, //Below this latency
     maxRT: 10000, //above this
     errorLatency: {
